@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(225, 231, 241);
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    height: 7vh;
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav .left-side {
+    flex: 50%;
+    padding-left: 90px;
+    padding-top: 5px;
+}
+
+nav .right-side {
+    flex: 50%;
+    justify-content: flex-end;
+    padding-right: 90px;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 40px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bolder;
+}
+
+nav .right-side a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.personal {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container-content {
+    flex-direction: row;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    margin: 5%;
+    margin-top: 8%;
+
+    border: none;
+    padding: 40px 0px 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(79, 79, 79);
+    background-color: white;
+}
+
+.container-content .left {
+    flex: 65%;
+}
+
+.container-content .right {
+    flex: 35%;
+}
+
+.container-content .social i {
+    padding: 30px 0px;  
+    margin-right: 25px;
+}
