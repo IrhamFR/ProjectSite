@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css"> 
+    <script src="assets/js/contact.js"></script>
     <title>Contact Me</title>
 </head>
 
@@ -16,10 +16,10 @@
             </a>
             <ul>
                 <li>
-                    <a class="active" href="index.html">Home </a>
+                    <a class="active" href="index.html"> Home </a>
                 </li>
                 <li>
-                    <a href="#">Blog</a>
+                    <a href="#"> My Blog</a>
                 </li>
             </ul>
         </div>
@@ -37,7 +37,7 @@
 
         <h1 style="text-align: center;">Get in Touch</h1>
 
-        <form action="">
+        <form id="form-contact">
             <div style=" margin-bottom:20px ;">
                 <label for="name" style="font-size: 20px; font-weight: 700;">Name</label>
                 <input id="name" type="text" required placeholder="input your name" style="
@@ -102,11 +102,10 @@
                     margin-top: 5px;
                     resize: none;
                     height: 100px;" 
-                    placeholder="input your message">
-                </textarea>
+                    placeholder="input your message"></textarea>
             </div>
-
-            <button type="submit" style="
+            
+            <button type="button" onclick="getData()" style="
                 background-color: #ec4437;
                 color: white;
                 border: none;
