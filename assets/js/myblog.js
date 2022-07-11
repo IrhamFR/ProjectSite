@@ -74,6 +74,11 @@ function rendermyblogs() {
     }
 }
 
+function onSubmit() {
+    var x = document.getElementById("lang").name;
+    document.getElementById("lang").innerHTML = x;
+}
+
 function getFullTime(time) {
     let date = time.getDate()
     let monthIndex = time.getMonth()

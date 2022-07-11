@@ -150,6 +150,23 @@ a:hover {
     height: 250px;
 }
 
+/* .myblog-form form .checkBoxOuter {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkBoxLeft {
+    display: flex;
+    flex-direction: column;
+    margin-right: 44px;
+}
+
+.checkBoxRight {
+    display: flex;
+    flex-direction: column;
+    margin-right: 44px;
+} */
+
 .myblog-form form .input-blog-image-group {
     width: 95,5%;
     font-size: 20px;

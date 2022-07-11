@@ -58,36 +58,31 @@
                         <textarea id="input-blog-content"></textarea>
                     </div>
                     <br>
-                    <div>
-                        <!-- <label for="input-blog-tech">Technologies</label>
-                        <input type="none" id="input-blog-tech" />
-                        <tbody>
-                            <tr>
-                                <th style="font-size: 25px; text-align:left">
-                                    <input type="checkbox" id="lang1" name="lang1" value="Node Js">
-                                    <label for="lang1">Node Js</label>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td style="text-align:left; padding-bottom: 20px;">
-                                    <input type="checkbox" id="lang2" name="lang2" value="React Js">
-                                    <label for="lang2">React Js</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th style="font-size: 25px; text-align:left">
-                                    <input type="checkbox" id="lang3" name="lang3" value="Next Js">
-                                    <label for="lang3">Next Js</label>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td style="text-align:left; padding-bottom: 20px;">
-                                    <input type="checkbox" id="lang4" name="lang4" value="TypeScript">
-                                    <label for="lang4">TypeScript</label>
-                                </td>
-                            </tr>
-                        </tbody> -->
-                    </div>
+                    <!-- <div class="checkBoxOuter">
+                        <label for="input-blog-tech">Technologies</label>
+                        <div class="checkBoxLeft">
+                            <div class="itemCheckBox">
+                                <input type="checkbox" id="lang" name="lang1" value="Node Js">
+                                <label for="lang1">Node Js</label>
+                            </div>
+                            <div class="itemCheckBox">
+                                <input type="checkbox" id="lang" name="lang2" value="React Js">
+                                <label for="lang2">React Js</label>
+                            </div>
+                        </div>    
+
+                        <div class="checkBoxRight">
+                            <div class="itemCheckBox">
+                                <input type="checkbox" id="lang" name="lang3" value="Next Js">
+                                <label for="lang3">Next Js</label>
+                            </div>
+                            <div class="itemCheckBox">
+                                <input type="checkbox" id="lang" name="lang4" value="TypeScript">
+                                <label for="lang4">TypeScript</label>
+                            </div>
+
+                        </div>
+                    </div> -->
                     <div>
                         <label>Upload Image</label>
                         <div class="input-blog-image-group">
@@ -99,7 +94,7 @@
                         </div>
                     </div>
                     <div class="button-group">
-                        <button type="submit">Post Blog</button>
+                        <button onclick="onSubmit()">Post Blog</button>
                     </div>
                 </form>
             </div>
