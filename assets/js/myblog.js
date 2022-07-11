@@ -15,7 +15,7 @@ let month = [
     "December"
 ]
 
-function addBlog(event) {
+function addBlog(event) { 
     event.preventDefault()
 
     let title = document.getElementById("input-blog-title").value
