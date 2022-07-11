@@ -179,7 +179,7 @@ a:hover {
 }
 
 .myblog-form form button {
-    background-color: #ec4437;
+    background-color: black;
     color: white;
     border: none;
     padding: 8px 30px;
@@ -192,6 +192,78 @@ a:hover {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+}
+
+.myblog .blog-list {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.myblog .blog-list .blog-list-item {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #dbdbdb;
+    border-radius: 8px;
+    display: flex;
+}
+
+.myblog .blog-list .blog-list-item .blog-image {
+    flex: 1;
+}
+
+.myblog .blog-list .blog-list-item .blog-image img {
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.myblog .blog-list .blog-list-item .blog-content {
+    padding-left: 20px;
+    flex: 2;
+}
+
+.myblog .blog-list .btn-group {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.myblog .blog-list .btn-group .btn-edit {
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 4px;
+    background: #dbdbdb;
+}
+
+.myblog .blog-list .btn-group .btn-post {
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 4px;
+    background: black;
+    color: #fff;
+}
+
+.myblog .blog-list h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.myblog .blog-list .detail-blog-content {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.myblog .blog-list .blog-list-item p {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
 }
 
 .blog-detail {
