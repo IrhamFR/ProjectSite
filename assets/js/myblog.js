@@ -57,7 +57,7 @@ function rendermyblogs() {
                     cursor: pointer;">Post Blog</button>
                 </div>
                 <h1>
-                    <a href="myblog-detail.html" target="_blank">${myblogs[i].title}</a>
+                    <a style="text-decoration:none; color: black;" href="myblog-detail.html" target="_blank">${myblogs[i].title}</a>
                 </h1>
                 <div>
                     11 Jul 2022 10:00 WIB | Irham Fatriyandas Rufdo
