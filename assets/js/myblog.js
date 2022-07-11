@@ -43,13 +43,13 @@ function rendermyblogs() {
             </div>
             <div>
                 <div>
-                    <button style="background-color: #ec4437;
+                    <button style="background-color: black;
                     color: white;
                     border: none;
                     padding: 8px 30px;
                     border-radius: 30px;
                     cursor: pointer;">Edit Post</button>
-                    <button style="background-color: #ec4437;
+                    <button style="background-color: black;
                     color: white;
                     border: none;
                     padding: 8px 30px;
@@ -60,13 +60,13 @@ function rendermyblogs() {
                     <a href="myblog-detail.html" target="_blank">${myblogs[i].title}</a>
                 </h1>
                 <div>
-                    8 Jul 2022 4:35 WIB | Irham Fatriyandas Rufdo
+                    11 Jul 2022 10:00 WIB | Irham Fatriyandas Rufdo
                 </div>
                 <p>
                     ${myblogs[i].content}
                 </p>
                 <div style="text-align: right;
-                margin-right: 20px">
+                margin: 20px">
                     <span style="font-size: 15px; color: grey;">0 minutes ago</span>
                 </div>
             </div>
