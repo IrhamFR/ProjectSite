@@ -108,3 +108,131 @@ a:hover {
     opacity: 0.7;
 }
 
+.myblog-form {
+    width: 400px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.myblog-form .form-container {
+    width: 400px;
+}
+
+.myblog-form .form-container h1 {
+    text-align: center;
+}
+
+.myblog-form form label {
+    font-size: 20px; 
+    font-weight: 700;
+}
+
+.myblog-form form label p {
+    font-size: 20px; 
+    font-weight: 400;
+    height: 10px;
+}
+
+.myblog-form form input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    background-color: #f3f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.myblog-form form textarea {
+    height: 250px;
+}
+
+.myblog-form form .input-blog-image-group {
+    width: 95,5%;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background: #f4f3f3;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.myblog-form form .input-blog-image-group label p {
+    font-size: 15px;
+}
+
+.myblog-form form .input-blog-image-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.myblog-form form .button-group {
+    text-align: left;
+}
+
+.myblog-form form button {
+    background-color: #ec4437;
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.myblog hr {
+    border: 1px solid #dbdbdb;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.blog-detail {
+    display: flex;
+    justify-content: center;
+}
+
+.blog-detail-container {
+    width: 80%;
+    margin: 40px 0;
+}
+
+.blog-detail-container img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-detail-container h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 120%;
+    margin-top: 5%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.blog-detail-container .author {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.blog-detail-container p {
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: justify;
+}
