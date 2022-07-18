@@ -1,121 +1,112 @@
 let myblogs = []
 
-let month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-]
-
-function addBlog(event) { 
+let addBlog = (event) => { 
     event.preventDefault()
+    const titleBlog = document.getElementById('titleBlog').value
+    let startBlog = document.getElementById("input-start-date").value
+    let endBlog = document.getElementById("input-end-date").value
+    const descriptionBlog = document.getElementById('desc-blog').value
+    let image = document.getElementById("input-blog-image").files[0]
 
-    let title = document.getElementById("input-blog-title").value
-    let content = document.getElementById("input-blog-content").value
-    let image = document.getElementById("input-blog-image")
+    if (image) {
+        image = URL.createObjectURL(image)
+    }
 
-    image = URL.createObjectURL(image.files[0])
+    checkedValue = [];
+    let technologyBlog = document.getElementsByClassName('blog-checkbox');
+    let data = technologyBlog.length
+    for (var i = 0; i < data; i++) {
+        if (technologyBlog[i].checked == true) {
+            checkedValue.push(technologyBlog[i].value)
+        }
+    }
 
     let myblog = {
-        title,
-        content,
+        titleBlog,
+        descriptionBlog,
         image,
-        postedAt: new Date()
+        checkedValue,
+        startBlog,
+        endBlog,
     }
 
     myblogs.push(myblog)
-    rendermyblogs()
+    console.log(myblog)
+    rendermyblog()
 }
 
-function rendermyblogs() {
+const rendermyblog = () => {
 
-    let containerBlogs = document.getElementById("contents")
+    let containerBlogs = document.getElementById("blog-list-render")
 
     containerBlogs.innerHTML = ""
 
     for (let i = 0; i < myblogs.length; i++) {
         containerBlogs.innerHTML += `
-        <div class="blog-list-item">
-            <div class="blog-image">
+        <div class="blog-list-render">
+            <div class="blog-img">
                 <img src="${myblogs[i].image}" alt="" />
             </div>
             <div class="blog-content">
-                <div class="btn-group">
-                    <button class="btn-edit">Edit Post</button>
-                    <button class="btn-post">Post Blog</button>
+                <a href="myblog-detail.html" class="title-blog">${myblogs[i].titleBlog}</a>
+                <p class="distance-card-blog">Duration : ${getDuration(myblogs[i].startBlog, myblogs[i].endBlog)}</p>
+                <p class="desc-card-blog">${myblogs[i].descriptionBlog}</p>
+                <div class="icon-blog">
+                    ${(function icon() {
+                    let string = ""
+                    for (let j = 0; j < blogs[i].checkedValue.length; j++) {
+                        string += `
+                        <div class="item-icon-blog">
+                            <i class="${myblogs[i].checkedValue[j]}"></i>
+                        </div>
+                        `}
+
+                    return string
+                    })()}
                 </div>
-                <h1>
-                    <a href="myblog-detail.html" target="_blank">${myblogs[i].title}</a>
-                </h1>
-                <div class="detail-blog-content">
-                    ${getFullTime(myblogs[i].postedAt)} | Irham Fatriyandas Rufdo
-                </div>
-                <p>
-                    ${myblogs[i].content}
-                </p>
-                <br>
-                <br>
-                <br>
-                <div style="text-align: right;
-                margin: 20px">
-                    <span style="font-size: 15px; color: grey;">${getDistanceTime(myblogs[i].postedAt)}</span>
-                </div>
+            <div class="blog-project-action">
+                <a href="#" class="edit-card-action">edit</a>
+                <a href="#" class="delete-card-action">delete</a>
             </div>
         </div>  
         `
     }
 }
 
-function onSubmit() {
-    var x = document.getElementById("lang").name;
-    document.getElementById("lang").innerHTML = x;
-}
+function getDuration(start, end) {
+    let proStart = new Date(start)
+    let proEnd = new Date(end)
 
-function getFullTime(time) {
-    let date = time.getDate()
-    let monthIndex = time.getMonth()
-    let year = time.getFullYear()
+    let distance = proEnd - proStart
 
-    let hour = time.getHours()
-    let minute = time.getMinutes()
 
-    return `${date} ${month[monthIndex]} ${year} ${hour}:${minute} WIB`
-}
-
-function getDistanceTime(time) {
-    let distance = new Date() - new Date(time)
-
-    let miliseconds = 1000
-    let secondInMinutes = 60
-    let minuteInHour = 60
-    let secondInHour = secondInMinutes * minuteInHour
-    let hourInDay = 23
-
-    let dayDistance = distance / (miliseconds * secondInHour * hourInDay)
-
-    if (dayDistance >= 1) {
-        const dayDate = Math.floor(dayDistance) + ' day ago'
-        return dayDate
+    let monthDistance = Math.floor(distance / (30 * 24 * 60 * 60 * 1000))
+    if (monthDistance != 0) {
+        return monthDistance + ' month'
     } else {
-        let hourDistance = Math.floor(distance / (miliseconds * secondInHour))
-        if (hourDistance > 0) {
-            return hourDistance + ' hour ago'
+        let weekDistance = Math.floor(distance / (7 * 24 * 60 * 60 * 1000))
+        if (weekDistance != 0) {
+            return weekDistance + ' weeks'
         } else {
-            let minuteDistance = Math.floor(distance / (miliseconds * secondInMinutes))
-            return minuteDistance + ' minute ago'
+            let daysDistance = Math.floor(distance / (24 * 60 * 60 * 1000))
+            if (daysDistance != 0) {
+                return daysDistance + ' Days Ago'
+            } else {
+                let hoursDistance = Math.floor(distance / (60 * 60 * 1000))
+                if (hoursDistance != 0) {
+                    return hoursDistance + ' Hours Ago'
+                } else {
+                    let minuteDistance = Math.floor(distance / (60 * 1000))
+                    if (minuteDistance != 0) {
+                        return minuteDistance + ' Minutes Ago'
+                    } else {
+                        let secondDistance = Math.floor(distance / 1000)
+                        if (secondDistance != 0)
+                        return secondDistance + ' sec'
+                    }
+                }
+            }
         }
     }
-
 }
-
-setInterval(function () {
-    rendermyblogs()
-}, 2000)
+        

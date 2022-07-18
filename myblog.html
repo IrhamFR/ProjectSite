@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css"> 
     <script src="assets/js/myblog.js"></script>
     <title>My Blog</title>
@@ -32,58 +33,57 @@
         <div class="myblog-form">
             <div class="form-container">
                 <form onsubmit="addBlog(event)">
-                    <h1>Create Post Blog</h1>
-                    <div>
+                    <h1 class="titleBlog">CREATE NEW BLOG</h1>
+                    <div class="input-form">
                         <label for="input-blog-title">Title</label>
-                        <input type="text" id="input-blog-title" />
+                        <input type="text" id="input-blog-title" placeholder="Type title here..." />
                     </div>
                     
-                    <div style="float: left;
-                    width: 45%;
-                    padding: 10px;
-                    display: table; 
-                    clear: both;">
-                        <label for="input-blog-title">Start Date</label>
-                        <input type="date" value="2000-01-01">
-                    </div>
-                    <div style="float: right;
-                    width: 45%;
-                    padding: 10px;">
-                        <label for="input-blog-title">End Date</label>
-                        <input type="date" value="2000-01-01">
-                    </div>
-
-                    <div>
-                        <label for="input-blog-content">Description</label>
-                        <textarea id="input-blog-content"></textarea>
-                    </div>
-                    <br>
-                    <!-- <div class="checkBoxOuter">
-                        <label for="input-blog-tech">Technologies</label>
-                        <div class="checkBoxLeft">
-                            <div class="itemCheckBox">
-                                <input type="checkbox" id="lang" name="lang1" value="Node Js">
-                                <label for="lang1">Node Js</label>
+                    <div class="dateBlog">
+                        <div class="date-time">
+                            <div class="start-date">
+                                <label for="input-start-date">Start Date</label>
+                                <input type="date" id="input-start-date">
                             </div>
-                            <div class="itemCheckBox">
-                                <input type="checkbox" id="lang" name="lang2" value="React Js">
-                                <label for="lang2">React Js</label>
+                            <div class="end-date">
+                                <label for="input-end-date">End Date</label>
+                                <input type="date" id="input-end-date">
                             </div>
-                        </div>    
-
-                        <div class="checkBoxRight">
-                            <div class="itemCheckBox">
-                                <input type="checkbox" id="lang" name="lang3" value="Next Js">
-                                <label for="lang3">Next Js</label>
-                            </div>
-                            <div class="itemCheckBox">
-                                <input type="checkbox" id="lang" name="lang4" value="TypeScript">
-                                <label for="lang4">TypeScript</label>
-                            </div>
-
                         </div>
-                    </div> -->
-                    <div>
+                    </div>
+                    
+                    <div class="input-form">
+                        <label for="desc-blog">Description</label>
+                        <textarea type="text" id="desc-blog" placeholder="Type description here..."></textarea>
+                    </div>
+                    <div class="checkBoxOuter">
+                        <label for="input-blog-tech">Technologies</label>
+                        <div class="checkBoxInner">
+                            <div class="checkBoxLeft">
+                                <div class="itemCheckBox">
+                                    <input type="checkbox" id="nodejs" class="blog-checkbox" value="fa-brands fa-node-js">
+                                    <label for="nodejs">Node Js</label>
+                                </div>
+                                <div class="itemCheckBox">
+                                    <input type="checkbox" id="reactjs" class="blog-checkbox" value="fa-brands fa-react">
+                                    <label for="reactjs">React Js</label>
+                                </div>
+                            </div>    
+    
+                            <div class="checkBoxRight">
+                                <div class="itemCheckBox">
+                                    <input type="checkbox" id="vuejs" class="blog-checkbox" value="fa-brands fa-vuejs">
+                                    <label for="vuejs">Vue Js</label>
+                                </div>
+                                <div class="itemCheckBox">
+                                    <input type="checkbox" id="angular" class="blog-checkbox" value="fa-brands fa-angular">
+                                    <label for="angular">Angular</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-form">
                         <label>Upload Image</label>
                         <div class="input-blog-image-group">
                             <label for="input-blog-image">
@@ -94,16 +94,48 @@
                         </div>
                     </div>
                     <div class="button-group">
-                        <button onclick="onSubmit()">Post Blog</button>
+                        <button type="submit">Post Blog</button>
                     </div>
                 </form>
             </div>
-        </div>
-        <div id="test">
-        </div>
-        <hr class="line" />
+        </div>      
 
-        <div id="contents" class="blog-list">
+    <hr class="line" />
+
+        <div class="blog-list">
+            <h1 class ="titleBlog">MY BLOG</h1>
+            <div class="blog-container" id="blog-list-render">
+                <div class="blog-list-render">
+                    <div class="blog-img">
+                        <img src="assets/images/look.jpg" alt="">
+                    </div>
+                    <div class="blog-content">
+                        <a href="myblog-detail.html" class="title-card-blog">Programming Nowadays</a>
+                        <p class="distance-card-blog">Duration : 1 Month</p>
+                        <p class="desc-card-blog">Computer programming is the process of performing 
+                            a particular computation (or more generally, accomplishing a specific 
+                            computing result)</p>
+                        <div class="icon-blog">
+                            <div class="item-icon-blog">
+                                <i class="fa-brands fa-node-js"></i>
+                            </div>
+                            <div class="item-icon-blog">
+                                <i class="fa-brands fa-react"></i>
+                            </div>
+                            <div class="item-icon-blog">
+                                <i class="fa-brands fa-vuejs"></i>
+                            </div>
+                            <div class="item-icon-blog">
+                                <i class="fa-brands fa-angular"></i>
+                            </div>
+                        </div>
+                        <div class="blog-project-action">
+                            <a href="#" class="edit-card-action">edit</a>
+                            <a href="#" class="delete-card-action">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
