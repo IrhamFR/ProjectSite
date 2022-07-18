@@ -462,9 +462,9 @@ button:hover {
     width: 42%;
     text-align: center;
     padding: 8px;
-    border: 2px solid orange;
+    border: 2px solid gray;
     border-radius: 15px;
-    color: orange;
+    color: gray;
     text-decoration: none;
 }
 
@@ -472,7 +472,7 @@ button:hover {
     width: 42%;
     text-align: center;
     padding: 8px;
-    background-color: red;
+    background-color: black;
     border-radius: 15px;
     color: white;
     text-decoration: none;
