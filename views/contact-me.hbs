@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <nav>
+        <div class="left-side">
+            <a href="/">
+                <img src="/public/assets/logo.png" alt="">
+            </a>
+            <ul>
+                <li>
+                    <a class="active" href="/"> Home </a>
+                </li>
+                <li>
+                    <a href="/myblog"> Add Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-side">
+            <a href="/contact-me">Contact Me</a>
+        </div>
+    </nav>
+
+    <div class="contact-me">
+        <div class="contact-container">
+            <form action="">
+                <h1>GET IN TOUCH</h1>
+                <div class="input-form">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" required placeholder="input your name">
+                </div>
+                <div class="input-form">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required placeholder="input your email">
+                </div>
+                <div class="input-form">
+                    <label for="phone" style="font-size: 20px; font-weight: 700;">Phone Number</label>
+                    <input id="phone" type="text" required placeholder="input your phone number">
+                </div>
+                <div class="input-form">
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject">
+                        <option value="none" selected disabled hidden>please select</option>
+                        <option>Lets Talk</option>
+                        <option>Lets Collaboration</option>
+                        <option>Lets Create Project</option>
+                    </select>
+                </div>
+                <div class="input-form">
+                    <label for="message" style="font-size: 20px; font-weight: 700;">Your Message</label>
+                    <textarea id="message" cols="30" rows="5" placeholder="input your message"></textarea>
+                </div>
+                <div class="button-form">
+                    <button type="button" onclick="getData()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+    <script src="/public/js/contact.js"></script>
+</html>
